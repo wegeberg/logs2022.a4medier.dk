@@ -1,0 +1,24 @@
+upstream logs2022_a4medier_upstream {
+    server localhost:3002;
+}
+server {
+    listen 443 ssl http2;
+    listen [::]:443;
+
+    server_name logs2022.a4medier.dk;
+
+    ssl_certificate /etc/nginx/ssl/a4medier.dk-cert.pem;
+    ssl_certificate_key /etc/nginx/ssl/a4medier.dk-key.pem;
+
+    location = /robots.txt {
+        add_header Content-Type text/plain;
+        return 200 "User-agent: *\nDisallow: /\n";
+    }
+
+    location / {
+        proxy_pass http://logs2022_a4medier_upstream;
+    }
+
+    access_log /var/log/nginx/logs2022.a4medier.access.log;
+    error_log /var/log/nginx/logs2022.a4medier.error.log;
+}
