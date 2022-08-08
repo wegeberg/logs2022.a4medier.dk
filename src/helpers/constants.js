@@ -8,7 +8,9 @@ export default {
     SECRET: process.env.SECRET,
     MONGO_DB_URI: TESTING
         ?   `mongodb://localhost:27017/${process.env.DB_NAME}?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&3t.uriVersion=3&3t.connection.name=Local&3t.alwaysShowAuthDB=true&3t.alwaysShowDBFromUserRole=true`
-        :   `mongodb+srv://${process.env.MONGODB_CREDENTIALS}@${process.env.CLUSTER_NAME}.k1kph.mongodb.net/${process.env.DB_NAME}?retryWrites=true;`
+        :   "mongodb+srv://doadmin:194nw570X2JPmIE8@dkmedier-mongodb-95911a7a.mongo.ondigitalocean.com/a4medier?tls=true&authSource=admin&replicaSet=dkmedier-mongodb"    // MONGO_DB_URI: TESTING
+    //     ?   `mongodb://localhost:27017/${process.env.DB_NAME}?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&3t.uriVersion=3&3t.connection.name=Local&3t.alwaysShowAuthDB=true&3t.alwaysShowDBFromUserRole=true`
+    //     :   `mongodb+srv://${process.env.MONGODB_CREDENTIALS}@${process.env.CLUSTER_NAME}.k1kph.mongodb.net/${process.env.DB_NAME}?retryWrites=true;`
 }
 
 

@@ -1,1 +1,1 @@
-pm2 start ./logs.a4medier-3002.sh --log-date-format 'DD-MM-YYYY HH:mm:ss'
+pm2 start ./logs2022.a4medier-3002.sh --log-date-format 'DD-MM-YYYY HH:mm:ss'
