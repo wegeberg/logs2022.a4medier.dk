@@ -1,7 +1,7 @@
 {
-    "name": "logs.a4medier.dk",
+    "name": "logs2022.a4medier.dk",
     "version": "1.0.0",
-    "description": "Logserver for A4 Medier",
+    "description": "Logserver for A4 Medier - 2022",
     "main": "index.js",
     "scripts": {
         "start": "npm run build && npm run serve",

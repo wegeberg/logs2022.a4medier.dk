@@ -7,7 +7,7 @@ const { SECRET } = constants;
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    res.status(200).json({ message: 'Velkommen til logs.a4medier.dk' });
+    res.status(200).json({ message: 'Velkommen til logs2022.a4medier.dk' });
 });
 router.get('/jwt', async (req, res) => {
     const auth = req.header('Authorization') ?? null;
